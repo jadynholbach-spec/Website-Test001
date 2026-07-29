@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <style>
     body {
-      background: #2b0035; /* dark purple */
+      background: #2b0035;
       font-family: Arial, sans-serif;
       color: #fff;
       margin: 0;
@@ -23,6 +23,12 @@
       margin-top: 40px;
       flex-wrap: wrap;
     }
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
     .gallery img {
       width: 250px;
       max-width: 90vw;
@@ -30,10 +36,26 @@
       box-shadow: 2px 2px 16px #0008;
       border: 4px solid #fff2;
       transition: transform 0.2s;
+      cursor: pointer;
     }
     .gallery img:hover {
       transform: scale(1.04);
       border-color: #fff;
+    }
+    .caption {
+      display: none;
+      margin-top: 12px;
+      background: #480060cc;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #0005;
+      font-size: 1em;
+      text-align: center;
+      max-width: 220px;
+    }
+    .show {
+      display: block;
     }
     footer {
       margin-top: 50px;
@@ -46,16 +68,31 @@
 </head>
 <body>
   <header>
-    <h1>MI HERMOSA PRINCESSA <333</h1>
-    
+    <h1>Photo Gallery</h1>
+    <p>Some of my favorite memories</p>
   </header>
   <div class="gallery">
-    <img src="2.png" alt="Gallery photo 1">
-    <img src="3.png" alt="Gallery photo 2">
-    <img src="4.png" alt="Gallery photo 3">
+    <div class="gallery-item">
+      <img src="2.png" alt="Gallery photo 1" onclick="toggleCaption(this)">
+      <div class="caption">This my food back off</div>
+    </div>
+    <div class="gallery-item">
+      <img src="3.png" alt="Gallery photo 2" onclick="toggleCaption(this)">
+      <div class="caption">Getting creative with makeup</div>
+    </div>
+    <div class="gallery-item">
+      <img src="4.png" alt="Gallery photo 3" onclick="toggleCaption(this)">
+      <div class="caption">nom nom</div>
+    </div>
   </div>
   <footer>
     <p>© 2026 Jadyn Holbach</p>
   </footer>
+  <script>
+    function toggleCaption(img) {
+      const caption = img.nextElementSibling;
+      caption.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
