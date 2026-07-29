@@ -57,6 +57,20 @@
     .show {
       display: block;
     }
+    /* Wiggle & color animation for captions */
+    @keyframes wiggle-color {
+      0% { transform: rotate(-3deg); color: #fff; }
+      20% { transform: rotate(3deg); color: #f59e42; }
+      40% { transform: rotate(-3deg); color: #E54F35; }
+      60% { transform: rotate(3deg); color: #5B876E; }
+      80% { transform: rotate(-1deg); color: #fffbe6; }
+      100% { transform: rotate(0deg); color: #fff; }
+    }
+    .caption.show {
+      animation: wiggle-color 0.7s infinite;
+      display: block;
+      display: inline-block; /* So rotate works smoothly */
+    }
     footer {
       margin-top: 50px;
       color: #bbb;
