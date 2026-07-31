@@ -1,0 +1,135 @@
+/* General styles for both pages */
+body {
+  background: #172A75;
+  font-family: Arial, sans-serif;
+  color: #26D4B1;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: #172A75;
+  color: #5B876E;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  margin: 30px auto;
+  padding: 20px;
+  background: #fffbe6;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 2px 8px #ccc;
+}
+
+/* Index page styles */
+img {
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px #888;
+  max-width: 300px;
+}
+
+.gallery-link {
+  display: inline-block;
+  background: #5B876E;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 20px 0 0 0;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.gallery-link:hover {
+  background: #417254;
+}
+
+footer {
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* Gallery page (3434.html) overrides and additions */
+body.gallery-page {
+  background: #2b0035;
+  color: #26D4B1;
+}
+
+header.gallery-header {
+  background: none;
+  color: inherit;
+  padding: 30px 10px 10px 10px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.gallery img {
+  width: 250px;
+  max-width: 90vw;
+  border-radius: 12px;
+  box-shadow: 2px 2px 16px #0008;
+  border: 4px solid #fff2;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  border-color: #fff;
+}
+
+.caption {
+  display: none;
+  margin-top: 12px;
+  background: #480060cc;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #0005;
+  font-size: 1em;
+  text-align: center;
+  max-width: 220px;
+}
+
+.show {
+  display: block;
+}
+
+/* Wiggle & color animation for captions */
+@keyframes wiggle-color {
+  0% { transform: rotate(-3deg); color: #fff; }
+  20% { transform: rotate(3deg); color: #f59e42; }
+  40% { transform: rotate(-3deg); color: #E54F35; }
+  60% { transform: rotate(3deg); color: #5B876E; }
+  80% { transform: rotate(-1deg); color: #fffbe6; }
+  100% { transform: rotate(0deg); color: #fff; }
+}
+
+.caption.show {
+  animation: wiggle-color 0.7s infinite;
+  display: inline-block; /* For smooth rotation */
+}
+
+/* Specific footer for gallery */
+footer.gallery-footer {
+  margin-top: 50px;
+  color: #bbb;
+}
