@@ -3,85 +3,10 @@
 <head>
   <title>Photo Gallery</title>
   <meta charset="UTF-8">
-  <style>
-
-    body {
-      background: #2b0035;
-      font-family: Arial, sans-serif;
-      color: #26D4B1;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    header {
-      text-align: center;
-      padding: 30px 10px 10px 10px;
-    }
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-    .gallery-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-    .gallery img {
-      width: 250px;
-      max-width: 90vw;
-      border-radius: 12px;
-      box-shadow: 2px 2px 16px #0008;
-      border: 4px solid #fff2;
-      transition: transform 0.2s;
-      cursor: pointer;
-    }
-    .gallery img:hover {
-      transform: scale(1.04);
-      border-color: #fff;
-    }
-    .caption {
-      display: none;
-      margin-top: 12px;
-      background: #480060cc;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px #0005;
-      font-size: 1em;
-      text-align: center;
-      max-width: 220px;
-    }
-    .show {
-      display: block;
-    }
-    /* Wiggle & color animation for captions */
-    @keyframes wiggle-color {
-      0% { transform: rotate(-3deg); color: #fff; }
-      20% { transform: rotate(3deg); color: #f59e42; }
-      40% { transform: rotate(-3deg); color: #E54F35; }
-      60% { transform: rotate(3deg); color: #5B876E; }
-      80% { transform: rotate(-1deg); color: #fffbe6; }
-      100% { transform: rotate(0deg); color: #fff; }
-    }
-    .caption.show {
-      animation: wiggle-color 0.7s infinite;
-      display: inline-block; /* For smooth rotation */
-    }
-    footer {
-      margin-top: 50px;
-      color: #bbb;
-      font-size: 0.9em;
-      text-align: center;
-      padding-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
+<body class="gallery-page">
+  <header class="gallery-header">
     <h1>Mi Hermosa Princessa &lt;333</h1>
   </header>
   <div class="gallery">
@@ -98,7 +23,7 @@
       <div class="caption">nom nom</div>
     </div>
   </div>
-  <footer>
+  <footer class="gallery-footer">
     <p>© 2026 Jadyn Holbach</p>
   </footer>
   <script>
@@ -109,3 +34,4 @@
   </script>
 </body>
 </html>
+
