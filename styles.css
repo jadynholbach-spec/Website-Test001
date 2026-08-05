@@ -128,6 +128,48 @@ header.gallery-header {
   display: inline-block; /* For smooth rotation */
 }
 
+#welcome-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 30, 0.96); /* Dark grey */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#welcome-modal p {
+  color: #fff;
+  font-size: 1.3em;
+  margin: 0 0 32px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+#welcome-modal button {
+  background: #561c74;      /* Deep purple */
+  color: #111;              /* Black text */
+  border: none;
+  border-radius: 8px;
+  padding: 14px 30px;
+  font-size: 1.15em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#welcome-modal button:hover {
+  background: #3a1150;
+}
+
+/* For showing or hiding the modal */
+.hidden {
+  display: none;
+}
+
 /* Specific footer for gallery */
 footer.gallery-footer {
   margin-top: 50px;
