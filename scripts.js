@@ -1,4 +1,6 @@
 console.log("scripts.js loaded!");
+console.log("modal:", document.getElementById("welcome-modal"));
+console.log("btn:", document.getElementById("continue-btn"));
 
 function toggleCaption(img) {
   const caption = img.nextElementSibling;
