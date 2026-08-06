@@ -167,7 +167,7 @@ header.gallery-header {
 
 /* For showing or hiding the modal */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Specific footer for gallery */
